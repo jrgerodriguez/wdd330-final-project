@@ -5,3 +5,4 @@ import { key, host } from "/js/config.js";
 loadHeaderFooter();
 const showMenu = new ShowMenu(key, host, document.querySelector(".product-list"),);
 showMenu.init();
+console.log("I am working")
