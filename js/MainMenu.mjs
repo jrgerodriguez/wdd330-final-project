@@ -4,7 +4,7 @@ const url = 'https://starbucks-coffee-db2.p.rapidapi.com/api/recipes';
 
 function productCardTemplate(product) {
     return `
-              <a href="/product_info_pages/index.html?product=${product._id}" class="product-link product-card" data-id="${product._id}">
+              <a href="product_info_pages/index.html?product=${product._id}" class="product-link product-card" data-id="${product._id}">
               <li class="">
                 <img src="${product.image}" alt="Image of ${product.name}">
                 <p class="card__brand">${product.name}</p>
