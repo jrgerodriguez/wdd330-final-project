@@ -29,15 +29,6 @@ export async function loadHeaderFooter() {
     renderWithTemplate(footerContent.innerHTML, footerElement);
 }
 
-export async function loadHeaderFooterIndex() {
-    const headerContent = await loadTemplate("partials/header.html");
-    const footerContent = await loadTemplate("partials/footer.html");
-    const headerElement = document.querySelector("#dynamic-header");
-    const footerElement = document.querySelector("#dynamic-footer");
-    renderWithTemplate(headerContent.innerHTML, headerElement);
-    renderWithTemplate(footerContent.innerHTML, footerElement);
-}
-
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false) {
     const htmlStrings = list.map(templateFn);
     if (clear) {
