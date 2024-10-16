@@ -1,5 +1,5 @@
-import { loadHeaderFooter } from "../js/utils.mjs";
-import { getLocalStorage } from "../js/utils.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
+import { getLocalStorage } from "./utils.mjs";
 
 loadHeaderFooter().then(() => {
     console.log(getLocalStorage("favorites"))

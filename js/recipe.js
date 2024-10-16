@@ -1,6 +1,6 @@
-import { loadHeaderFooter } from "../js/utils.mjs";
-import { key, host } from "../js/config.js";
-import ShowRecipe from "../js/ShowRecipeInfo.mjs";
+import { loadHeaderFooter } from "./utils.mjs";
+import { key, host } from "./config.js";
+import ShowRecipe from "./ShowRecipeInfo.mjs";
 
 loadHeaderFooter().then(() => {
     const urlParams = new URLSearchParams(window.location.search);

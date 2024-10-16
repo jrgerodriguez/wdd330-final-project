@@ -1,6 +1,6 @@
-import ShowMenu from "../js/MainMenu.mjs";
-import { convertToJson } from "../js/MainMenu.mjs";
-import { getLocalStorage, setLocalStorage } from "../js/utils.mjs";
+import ShowMenu from "./MainMenu.mjs";
+import { convertToJson } from "./MainMenu.mjs";
+import { getLocalStorage, setLocalStorage } from "./utils.mjs";
 
 function recipeDetailsTemplate(product) {
     return `<h2>${product[0].name}</h2>
