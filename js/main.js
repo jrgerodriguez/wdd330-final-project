@@ -1,6 +1,6 @@
-import { loadHeaderFooter } from "./utils.mjs";
-import ShowMenu from "./MainMenu.mjs";
-import { key, host } from "./config.js";
+import { loadHeaderFooter } from "../js/utils.mjs";
+import ShowMenu from "../js/MainMenu.mjs";
+import { key, host } from "../js/config.js";
 
 loadHeaderFooter();
 const showMenu = new ShowMenu(key,host, document.querySelector(".product-list"),);

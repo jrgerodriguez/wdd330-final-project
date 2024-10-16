@@ -1,4 +1,4 @@
-import { renderListWithTemplate } from "./utils.mjs";
+import { renderListWithTemplate } from "../js/utils.mjs";
 
 const url = 'https://starbucks-coffee-db2.p.rapidapi.com/api/recipes';
 
