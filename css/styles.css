@@ -27,15 +27,16 @@ ul {
     padding: 0;
 }
 
-h2,h4 {
+h2,
+h4 {
     margin: 0;
 }
 
-hr{
+hr {
     width: 50%
 }
 
-.button {
+.add-to-favorites {
     margin: 0;
 }
 
@@ -56,7 +57,7 @@ header {
 
 .favorites a {
     display: flex;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .favorites a:hover {
@@ -74,14 +75,14 @@ header {
 }
 
 .product-card {
-    flex: 1 1 250px;        
-    margin: 10px;          
-    background-color: #ececec; 
-    text-align: center;    
-    padding: 20px;          
-    box-sizing: border-box; 
+    flex: 1 1 250px;
+    margin: 10px;
+    background-color: #ececec;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out; 
+    transition: transform 0.3s ease-in-out;
 }
 
 .product-card:hover {
@@ -131,42 +132,91 @@ footer {
 }
 
 .recipe h4 {
-    margin: 50px 0 -35px 0; 
+    margin: 50px 0 -35px 0;
     text-align: left;
 }
 
-.recipe .ingredients, 
+.recipe .ingredients,
 .recipe .steps {
     max-width: 100%;
     margin: 50px 0;
     text-align: left;
 }
 
-.recipe .ingredients li, 
+.recipe .ingredients li,
 .recipe .steps li {
     margin-top: 15px;
 }
 
-button {
+.add-to-favorites {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     padding: 10px 30px;
-    background-color: #000; 
-    color: white; 
+    background-color: #000;
+    color: white;
     font-size: 17px;
     font-weight: bold;
     border-radius: 8px;
-    border: none; 
+    border: none;
     cursor: pointer;
-    transition: transform 0.2s; 
+    transition: transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 200px;
 }
 
-button:hover {
-    transform: scale(1.05); 
+.add-to-favorites:hover {
+    transform: scale(1.05);
 }
+
+/* Favorites */
+
+.favorites-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.favorites-main .product-card {
+    max-width: 50%;
+}
+
+.favorites-main h1 {
+    margin-bottom: 35px;
+}
+
+.button-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: #d0d0d0;
+    transform: translateY(0);
+}
+
 
 /* Media Queries */
 @media (max-width: 1200px) {
@@ -174,7 +224,7 @@ button:hover {
         width: 85%;
     }
 
-    button {
+    .add-to-favorites {
         width: 250px;
         padding: 15px 30px;
     }
@@ -184,7 +234,8 @@ button:hover {
         height: auto;
     }
 
-    .hero h1 {
+    .hero h1,
+    .favorites-main h1 {
         font-size: 35px;
     }
 
@@ -197,15 +248,26 @@ button:hover {
     }
 }
 
+@media (max-width: 655px) {
+    .favorites-main .product-card {
+        max-width: 100%;
+    }
+
+    .favorites-main .product-card:not(:last-child) {
+        margin-bottom: 25px;
+    }
+}
+
 @media (max-width: 600px) {
     .recipe img {
         width: 95%;
     }
+
     .recipe .information-area {
         width: 100%;
     }
 
-    button {
+    .add-to-favorites {
         width: 90%;
     }
 
@@ -214,7 +276,8 @@ button:hover {
         height: auto;
     }
 
-    .hero h1 {
+    .hero h1,
+    .favorites-main h1 {
         font-size: 27px;
     }
 
@@ -226,8 +289,3 @@ button:hover {
         width: 150px;
     }
 }
-
-
-
-
-

@@ -1,6 +1,10 @@
 import { loadHeaderFooter } from "./utils.mjs";
 import { getLocalStorage } from "./utils.mjs";
+import RenderFavorites from "./FavoritesPage.mjs";
 
 loadHeaderFooter().then(() => {
-    console.log(getLocalStorage("favorites"))
+    const renderFavorites = new RenderFavorites();
+    renderFavorites.init();
 });
+
+
