@@ -55,17 +55,17 @@ export default class RenderFavorites {
         const removeItemBtns = document.querySelectorAll(".remove-item");
         removeItemBtns.forEach(removeItemBtn => {
             removeItemBtn.addEventListener("click", function (event) {
-                const productId = this.getAttribute("data-id");
+                const productId = this.getAttribute("data-id"); // by using this, it takes the complete element that triggered the event 
                 let favoritesArray = getLocalStorage("favorites");
 
                 const updatedFavoritesArray = favoritesArray.filter(item => item.id !== productId);
 
                 if (favoritesArray.length !== updatedFavoritesArray.length) {
                     setLocalStorage("favorites", updatedFavoritesArray);
-
                     event.target.closest("li").remove();
                 }
             });
         });
+        
     }
 }

@@ -27,6 +27,13 @@ export async function loadHeaderFooter() {
     const footerElement = document.querySelector("#dynamic-footer");
     renderWithTemplate(headerContent.innerHTML, headerElement);
     renderWithTemplate(footerContent.innerHTML, footerElement);
+
+    const currentFavorites = getLocalStorage("favorites")
+
+    const itemInFavIcon = document.querySelector(".item-in-fav");
+        if (currentFavorites.length != 0) {
+            itemInFavIcon.style.display = "block";
+        }
 }
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false) {

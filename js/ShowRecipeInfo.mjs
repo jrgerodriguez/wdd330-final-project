@@ -105,11 +105,14 @@ export default class ShowRecipe {
                     favoritesArray.push(favoriteItem);
                     setLocalStorage("favorites", favoritesArray)
                     alert(`${productName} has been added to favorites`)
+                    window.location.reload()
                 } else { // If it exists, this alert is triggered
                     alert(`${productName} already exists in favorites`)
-                } 
+                }
+                
             })
         }
+       
     }
 
 }
