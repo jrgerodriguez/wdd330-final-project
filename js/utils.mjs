@@ -28,12 +28,14 @@ export async function loadHeaderFooter() {
     renderWithTemplate(headerContent.innerHTML, headerElement);
     renderWithTemplate(footerContent.innerHTML, footerElement);
 
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
     const currentFavorites = getLocalStorage("favorites")
 
-    // const itemInFavIcon = document.querySelector(".item-in-fav");
-    //     if (currentFavorites.length != 0) {
-    //         itemInFavIcon.style.display = "block";
-    //     }
+    const itemInFavIcon = document.querySelector(".item-in-fav");
+    if (currentFavorites.length != 0) {
+        itemInFavIcon.style.display = "block";
+    }
 }
 
 export function renderListWithTemplate(templateFn, parentElement, list, position = "afterbegin", clear = false) {
