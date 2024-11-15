@@ -47,7 +47,8 @@ export function renderListWithTemplate(templateFn, parentElement, list, position
 }
 
 export function getLocalStorage(key) {
-    return JSON.parse(localStorage.getItem(key));
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : [];
 }
 
 export function setLocalStorage(key, data) {
